@@ -1661,7 +1661,7 @@ contract BUSDdistributor is AccessControl {
     }
 
     function expireOldDates(uint256 max) private{
-        uint[4] memory packages = [uint(30), uint(90), uint(180), uint(365)];
+        uint[] memory packages; // = [uint(30)]; 
         uint processed = 0;
         for(uint i=0; i< packages.length;i++){
             uint256 package = packages[i];
